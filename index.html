@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi POS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Aplikasi POS</h1>
+        <div class="mb-3">
+            <input type="text" id="productCode" class="form-control" placeholder="Scan QR Code atau Masukkan Kode Produk">
+            <button class="btn btn-primary mt-2" id="addProduct">Tambahkan Produk</button>
+        </div>
+        <h4>Keranjang Belanja</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nama Produk</th>
+                    <th>Harga (Rp)</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="cartBody">
+                <!-- Daftar produk akan ditambahkan di sini -->
+            </tbody>
+        </table>
+        <div class="mt-3">
+            <h4>Total: <span id="totalAmount">Rp 0</span></h4>
+            <button class="btn btn-primary" id="checkoutButton">Checkout</button>
+            <a href="php/listProducts.php" class="btn btn-info">Daftar Produk</a>
+            <a href="php/listTransactions.php" class="btn btn-warning">Daftar Transaksi</a>
+        </div>
+    </div>
+</body>
+</html>
